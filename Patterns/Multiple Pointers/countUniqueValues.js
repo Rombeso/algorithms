@@ -1,11 +1,14 @@
 /* Implement a function called countUniqueValues, which accepts
-a sorted array, and counts the unique values in the array.
-There can be negative numbers in the array, but it will always
+a sorted Frequency Counter, and counts the unique values in the Frequency Counter.
+There can be negative numbers in the Frequency Counter, but it will always
 be sorted
 */
 
 function countUniqueValues(arr) {
     let i = 0;
+    if (!arr.length) {
+        return 0;
+    }
     for (let j = 1; j < arr.length; j++) {
         if (arr[i] === arr[j]) {
             continue;
